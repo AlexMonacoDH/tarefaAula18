@@ -140,6 +140,32 @@ c. Resolver este problema com um do/while</p>
                 ?>
             </div>
         </li>
+
+        <li>
+            <p>Definir um array com 10 números aleatórios entre 0 e 10. Percorrer esse array
+para imprimir todos os números. A execução deve terminar se algum dos
+números encontrados for 5 (a mensagem impressa deve ser “Encontramos um
+5!”).
+a. Resolver este problema com um for.
+b. Resolver este problema com um while.
+c. Resolver este problema com um do/while.</p>
+            <div>
+                <?php
+                $n_aleatorios = [];
+                for ($i=0; $i < 10; $i++) {
+                    $n_aleatorios[$i] = mt_rand(0,10);
+                }
+                var_dump($n_aleatorios);
+                echo('--<br>');
+                $i = 0;
+                while($i<10){
+                    $n_aleatorios[$i] = mt_rand(0,10);
+                    $i++;
+                }
+                var_dump($n_aleatorios);
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
