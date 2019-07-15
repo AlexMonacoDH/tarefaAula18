@@ -186,6 +186,28 @@ array e [index] representa o índice</p>
             ?>
             </div>
         </li>
+
+        <li>
+            <p>Definir uma variável $mascote que seja um array associativo
+a. No índice animal, deve dizer que animal é.
+b. No índice idade, deve dizer a idade.
+c. No índice altura, deve dizer a altura.
+d. No índice nome, deve dizer o nome</p>
+
+            <div>
+            <?php
+                $mascote = [
+                    'animal' => 'cachorro',
+                    'idade' => 4,
+                    'altura' => 40,
+                    'nome' => 'Rex'
+                ];
+                echo('<pre>');
+                print_r($mascote);
+                echo('<pre>');
+            ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
