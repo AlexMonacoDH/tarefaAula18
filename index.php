@@ -104,6 +104,42 @@ moeda forem necessários.</p>
                 ?>
             </div>
         </li>
+
+        <li>
+            <p>Definir um array com 5 strings que sejam nomes. Percorrer esse array para
+imprimir todos os nomes na tela.
+a. Resolver este problema com um for.
+b. Resolver este problema com while.
+c. Resolver este problema com um do/while</p>
+            <div>
+                <?php
+                    $nomes = [
+                        'Sergio',
+                        'Thomaz',
+                        'Alex',
+                        'Marcuso',
+                        'Tom'
+                    ];
+                    
+                    for ($i=0; $i < count($nomes); $i++) { 
+                        echo($nomes[$i].'<br>');
+                    }
+                    echo('--<br>');
+                    $i = 0;
+                    while($i < count($nomes)){
+                        echo($nomes[$i].'<br>');
+                        $i++;
+                    }
+                    echo('--<br>');
+                    $i = 0;
+                    do{
+                        echo($nomes[$i].'<br>');
+                        $i++;
+                    }
+                    while($i<count($nomes));
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
