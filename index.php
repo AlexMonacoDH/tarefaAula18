@@ -166,6 +166,26 @@ c. Resolver este problema com um do/while.</p>
                 ?>
             </div>
         </li>
+
+        <li>
+            <p>Utilizando a função “Range”(http://php.net/manual/en/function.range.php),
+criar um intervalo de letras (de a até o), imprimir um valor que diga “Na posição
+[index], está o valor [value]”, em que [value] será substituído por cada valor do
+array e [index] representa o índice</p>
+            <pre>
+                <?php
+                $letras = range('a','o');
+                print_r($letras);
+                ?>
+            </pre>
+            <div>
+            <?php
+                foreach($letras as $posicao => $letra){
+                    echo "Na posição $posicao, está o valor $letra<br>";
+                }
+            ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
