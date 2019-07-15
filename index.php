@@ -60,7 +60,7 @@ em um número gerado aleatoriamente entre 0 e 100</p>
         </li>
 
         <li>
-            <pUtilizando um while, fazer um programa que lance uma moeda (escolhendo
+            <p>Utilizando um while, fazer um programa que lance uma moeda (escolhendo
 um número aleatório que pode ser 0 ou 1) até tirar 5 vezes cara (o número 1).
 Ao terminar, imprimir o número de lançamentos da moeda até tirar 5 vezes
 cara.
@@ -81,11 +81,29 @@ cara.
                             $contagem = 0;
                         }
                     }
+                    //ternário
+                    //$contagem = ($result == 1 ? $contagem + 1 : 0);
                     echo("Lançou a moeda $n_arremessos vezes até conseguir 5 caras");
                 ?>
             </div>
         </li>
 
+        <li>
+            <p>Utilizando um do/while, realizar um programa que lance a moeda até tirar
+cara (o número 1). No final do programa, imprimir quantos lançamentos da
+moeda forem necessários.</p>
+            <div>
+                <?php
+                    $n_lancamentos = 0;
+                    do{
+                        $result = mt_rand(0,1);
+                        $n_lancamentos++;
+                    }
+                    while($result != 1);
+                    echo("Foram necessários $n_lancamentos lançamentos");
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
