@@ -257,6 +257,48 @@ d. No índice nome, deve dizer o nome</p>
             ?>
             </div>
         </li>
+
+        <li>
+            <p>A partir de um arquivo com a seguinte variável definida:
+$ceu = array( "Itália"=>"Roma", "Luxemburgo"=>"Luxemburgo",
+"Bélgica"=> "Bruxelas", "Dinamarca"=>"Copenhagen",
+"Finlândia"=>"Helsinki", "França" => "Paris",
+"Eslováquia"=>"Bratislava", "Eslovênia"=>"Liubliana",
+"Alemanha" => "Berlim", "Grécia" => "Atenas",
+"Irlanda"=>"Dublin", "Holanda"=>"Amsterdã",
+"Portugal"=>"Lisboa", "Espanha"=>"Madri",
+"Suécia"=>"Estocolmo", "Reino Unido"=>"Londres",
+"Chipre"=>"Nicósia", "Lituânia"=>"Vilnius", "República
+Tcheca"=>"Praga", "Estônia"=>"Tallinn",
+"Hungria"=>"Budapeste", "Letônia"=>"Riga",
+"Malta"=>"Valletta", "Áustria" => "Viena",
+"Polônia"=>"Varsóvia") ;
+Criar um script que mostre o nome da capital e o país a partir da variável $ceu.</p>
+
+            <div>
+            <?php
+                $ceu = ["Itália"=>"Roma", "Luxemburgo"=>"Luxemburgo",
+                "Bélgica"=> "Bruxelas", "Dinamarca"=>"Copenhagen",
+                "Finlândia"=>"Helsinki", "França" => "Paris",
+                "Eslováquia"=>"Bratislava", "Eslovênia"=>"Liubliana",
+                "Alemanha" => "Berlim", "Grécia" => "Atenas",
+                "Irlanda"=>"Dublin", "Holanda"=>"Amsterdã",
+                "Portugal"=>"Lisboa", "Espanha"=>"Madri",
+                "Suécia"=>"Estocolmo", "Reino Unido"=>"Londres",
+                "Chipre"=>"Nicósia", "Lituânia"=>"Vilnius", "República Tcheca"=>"Praga", "Estônia"=>"Tallinn",
+                "Hungria"=>"Budapeste", "Letônia"=>"Riga",
+                "Malta"=>"Valletta", "Austria" => "Viena",
+                "Polônia"=>"Varsóvia"];
+                
+                ksort($ceu);
+
+                foreach ($ceu as $i => $value) {
+                    echo 'A capital da '.$i.' é '.$value.'.<br>';
+                }
+                
+            ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
