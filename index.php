@@ -294,8 +294,56 @@ Criar um script que mostre o nome da capital e o país a partir da variável $ce
 
                 foreach ($ceu as $i => $value) {
                     echo 'A capital da '.$i.' é '.$value.'.<br>';
+                }        
+            ?>
+            </div>
+        </li>
+
+        <li>
+            <p>A partir de um arquivo com a seguinte variável definida:
+$ceu = [
+"Argentina" => ["Buenos Aires", "Córdoba", "Santa
+Fé"],
+"Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"],
+"Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
+"França" => ["Paris", "Nantes", "Lyon"],
+"Itália" => ["Roma", "Milão", "Veneza"],
+"Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+];
+Criar um script que mostre o nome de cada país e suas cidades a partir da
+variável $ceu com o seguinte formato:
+As cidades da Argentina são:
+● Buenos Aires
+● Córdoba
+● Santa Fé
+As cidades do Brasil são:
+● Brasília
+● Rio de Janeiro
+● São Paulo
+</p>
+
+            <div>
+            <?php
+                $ceu = [
+                    "Argentina" => ["Buenos Aires", "Córdoba", "Santa
+                    Fé"],
+                    "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"],
+                    "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
+                    "França" => ["Paris", "Nantes", "Lyon"],
+                    "Itália" => ["Roma", "Milão", "Veneza"],
+                    "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+                    ];
+                    
+                    $b = "&#149";//code for bullet points
+                    
+                    foreach ($ceu as $key => $value) {
+                        echo '<br>As cidades de '.$key.' são:<br>';
+                        $i = 0;
+                        while ($i < count($value)) {
+                            echo $b.' '.$value[$i].'<br>';
+                            $i++;
+                    }
                 }
-                
             ?>
             </div>
         </li>
