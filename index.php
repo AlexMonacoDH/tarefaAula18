@@ -83,7 +83,7 @@ cara.
                     }
                     //ternário
                     //$contagem = ($result == 1 ? $contagem + 1 : 0);
-                    echo("Lançou a moeda $n_arremessos vezes até conseguir 5 caras");
+                    echo("Lançou a moeda $n_arremessos vezes até conseguir 5 caras.");
                 ?>
             </div>
         </li>
@@ -100,7 +100,7 @@ moeda forem necessários.</p>
                         $n_lancamentos++;
                     }
                     while($result != 1);
-                    echo("Foram necessários $n_lancamentos lançamentos");
+                    echo("Foram necessários $n_lancamentos lançamentos.");
                 ?>
             </div>
         </li>
@@ -151,18 +151,67 @@ b. Resolver este problema com um while.
 c. Resolver este problema com um do/while.</p>
             <div>
                 <?php
+                //criando o array com números aleatórios
                 $n_aleatorios = [];
                 for ($i=0; $i < 10; $i++) {
                     $n_aleatorios[$i] = mt_rand(0,10);
                 }
-                var_dump($n_aleatorios);
                 echo('--<br>');
+
+                //utilizando o while para procurar um 5 no array
                 $i = 0;
-                while($i<10){
-                    $n_aleatorios[$i] = mt_rand(0,10);
-                    $i++;
+                $encontrou1 = false;
+                while ($i<10){
+                    echo "$n_aleatorios[$i]<br>";
+                    if ($n_aleatorios[$i] == 5){
+                        echo "Encontramos um 5! na posição $i.<br>";
+                        $encontrou1 = true;
+                        echo('--<br>');
+                        loop: break;
+                    }
+                    else{
+                        $i++;
+                    }
                 }
-                var_dump($n_aleatorios);
+                    if ($encontrou1 != true){
+                        echo "Não encontramos um 5 no array.<br>";
+                        echo('--<br>');
+                    }
+
+                //utilizando o for para procurar um 5 no array
+                $encontrou2 = false;
+                for ($i=0; $i < count($n_aleatorios) ; $i++) {
+                    echo "$n_aleatorios[$i]<br>";
+                    if ($n_aleatorios[$i] == 5) {
+                        echo "Encontramos um 5! na posição $i.<br>";
+                        $encontrou2 = true;
+                        echo('--<br>');
+                        $i = count($n_aleatorios);
+                    }
+                }
+                if($encontrou2 != true){
+                    echo "Não encontramos um 5 no array.<br>";
+                    echo('--<br>');
+                }
+                //utilizando o do/while para procurar um 5 no array
+                $encontrou3 = false;
+                $i = 0;
+                do {
+                    echo "$n_aleatorios[$i]<br>";
+                    if ($n_aleatorios[$i] == 5) {
+                        echo "Encontramos um 5! na posição $i.<br>";
+                        $encontrou3 = true;
+                        echo('--<br>');
+                        loop1: break;
+                    }
+                    else {
+                        $i++;
+                    }
+                } while ($i<10);
+                if ($encontrou3 != true){
+                    echo "Não encontramos um 5 no array.<br>";
+                    echo('--<br>');
+                }
                 ?>
             </div>
         </li>
