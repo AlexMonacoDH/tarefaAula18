@@ -342,11 +342,49 @@ As cidades do Brasil são:
                         while ($i < count($value)) {
                             echo $b.' '.$value[$i].'<br>';
                             $i++;
+                        }
                     }
-                }
             ?>
             </div>
         </li>
-    </ol>
+
+        <li>
+            <p>A partir do exercício anterior:
+● Adicionar a cada país um dado extra, além das cidades, chamado
+naAmerica. Esse valor deve ser true ou false.
+● Fazer com que a impressão anterior não mostre países que não estejam
+na América.
+IMPORTANTE: Para que isso funcione bem, os alunos devem criar um array
+associativo para cada país, de forma que cada país tenha os dados de suas
+cidades e naAmerica.
+</p>
+
+            <div>
+            <?php
+                $ceu = [
+                    "Argentina" => ["Buenos Aires", "Córdoba", "Santa
+                    Fé", "naAmerica" => true],
+                    "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo", "naAmerica" => true],
+                    "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla", "naAmerica" => true],
+                    "França" => ["Paris", "Nantes", "Lyon", "naAmerica" => false],
+                    "Itália" => ["Roma", "Milão", "Veneza", "naAmerica" => false],
+                    "Alemanha" => ["Munique", "Berlim", "Frankfurt", "naAmerica" => false]
+                    ];
+                    
+                    $b = "&#149";//code for bullet points
+                    
+                    foreach ($ceu as $key => $value) {
+                        if(end($value)==true){
+                            echo '<br>As cidades de '.$key.' são:<br>';
+                            $i = 0;
+                            while ($i < count($value)-1) {
+                                echo $b.' '.$value[$i].'<br>';
+                                $i++;
+                            }
+                        }
+                    }
+            ?>
+            </div>
+        </li>
 </body>
 </html>
